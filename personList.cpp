@@ -11,6 +11,7 @@ PersonList::PersonList(){
     theList = new Person*[capacity];
 }
 
+
 PersonList::~PersonList(){ 
         for(int i = 0; i<numPeople; i++){
 		delete theList[i];
