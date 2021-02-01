@@ -11,11 +11,12 @@ PersonList::PersonList(){
     theList = new Person*[capacity];
 }
 
-PersonList::~PersonList(){
-    for (int i=0;i<numPeople;i++){
-	delete theList[i];
-}
-    delete [] theList;
+
+PersonList::~PersonList(){ 
+        for(int i = 0; i<numPeople; i++){
+		delete theList[i];
+	}
+	delete [] theList;
 }
 
 void PersonList::addPerson(const char* child_name, const char* father_name, const char* mother_name){
